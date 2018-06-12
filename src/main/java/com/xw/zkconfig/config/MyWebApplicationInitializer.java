@@ -24,7 +24,6 @@ public class MyWebApplicationInitializer extends AbstractAnnotationConfigDispatc
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
 		return new Class<?>[] { RootConfig.class };
-//		return null;
 	}
 
 	/**
@@ -52,7 +51,6 @@ public class MyWebApplicationInitializer extends AbstractAnnotationConfigDispatc
 	 */
 	@Override
 	protected Filter[] getServletFilters() {
-		// TODO Auto-generated method stub
 		return super.getServletFilters();
 	}
 

@@ -8,6 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.xw.zkconfig.config.PropertiesConfig;
 import com.xw.zkconfig.service.TestServiceImpl;
 
+/**
+ * 
+ *
+ */
 @RestController
 public class IndexController {
 
@@ -23,15 +27,31 @@ public class IndexController {
 	@Autowired
 	private PropertiesConfig propertiesConfig;
 	
-	@RequestMapping("/")
+	@RequestMapping("/1")
 	public String index() {
 		testServiceImpl.test();
-		return "helloword" + xw + xw2 + zkaddr;
+		return xw + xw2 + zkaddr;
 	}
 	
 	@RequestMapping("/2")
 	public String index2() {
-		
-		return "helloword" + propertiesConfig.getXw() + propertiesConfig.getXw2() + propertiesConfig.getZkaddr();
+		return propertiesConfig.getXw() + propertiesConfig.getXw2() + propertiesConfig.getZkaddr();
 	}
+
+	public static void main(String[] args) {
+		Long i = 12L;  
+		Long j = 12L;  
+		Long m = 195L;  
+		Long n = 195L;  
+		System.out.println(i==j);//true  
+		System.out.println(m==n);//false  
+		System.out.println(i.equals(j));//true  
+		System.out.println(m.equals(n));//true  
+		
+		Long id = null;
+		Long id2 = 333L;
+		System.out.println(id2.equals(id));
+		System.out.println(id == id2);
+	}
+
 }
